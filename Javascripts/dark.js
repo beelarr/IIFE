@@ -17,8 +17,24 @@ var Starwars = (() =>{
 
         get_evil_location: () =>{
             return darkside_location
-        }
+        },
+
+        add_evil: (who)=>{
+            key_players.push(who);
+            console.log('evil players', key_players)
+        },
+
+
+        add_key_player: (who)=>{
+        key_players.push(who);
+        console.log('players list', key_players);
+    },
+
+
+
+
     }
 })();
+
 
 

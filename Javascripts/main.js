@@ -46,4 +46,28 @@ dark_location_button.addEventListener('click', ()=>{
 let light_location_button = document.querySelector('#btn-get_location_light');
 light_location_button.addEventListener('click', ()=>{
     Starwars.get_location(light_location_button.getAttribute('who_is_it'));
-})
+});
+
+
+let add_player = document.querySelector('#btn-signup');
+
+add_player.addEventListener('click', ()=>{
+    let new_player_name = document.querySelector('#newperson').value;
+    let which_selected;
+    let radios = document.getElementsByName('whichside');
+    for (let i = 0; i < radios.length; i ++){
+        if (radios[i].checked){
+            which_selected = radios[i].value;
+            break;
+        }
+
+    }
+    console.log('which selected', which_selected)
+
+    if(which_selected == 0){
+        Starwars.add_jedi(new_player_name);
+    }else if(which_selected == 1){
+        Starwars.add_key_player(new_player_name)
+    }else {Starwars.add_evil(new_player_name)
+    }
+});

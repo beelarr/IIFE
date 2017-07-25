@@ -2,10 +2,12 @@
  * Created by beelarr on 7/25/17.
  */
 
-var Lightside = ((e)=>{
+var Starwars = ((e)=>{
     let location = 'D Qar'
     let key_players = ["Princess Leia", "Han Solo", "Chewbacca", "Admiral Ackbar", "Jar Jar Binks"]
     let jedi = ["Luke Skywalker", "Yoda", "Obi-Wan Kenobi", "Anakin Skywalker", "Mace Windu"]
+
+
 
     e.get_location = (who_asks)=>{
         console.log('who asks', who_asks)
@@ -23,5 +25,14 @@ var Lightside = ((e)=>{
             console.log('You are Evil, cannot tell you!')
         }
 
-    }
-})(Starwars)
+    },
+        e.add_jedi = (who)=>{
+            jedi.push(who);
+            console.log('jedi list', jedi)
+        };
+
+
+  return e
+
+})(Starwars);
+
